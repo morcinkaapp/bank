@@ -22,7 +22,7 @@ public class UserEntity {
     @NotNull
     private String password;
 
-    private UserEntity() {
+    public UserEntity() {
     }
 
     private UserEntity(UserEntityBuilder userEntityBuilder) {
