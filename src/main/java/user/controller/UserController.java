@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import user.model.UserEntity;
+import user.model.UserDTO;
 import user.service.UserService;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
 /**
@@ -25,12 +24,12 @@ public class UserController {
     }
 
     @PostMapping("/create")
-    public void createUser(@RequestBody UserEntity userEntity) {
-        this.userService.createUser(userEntity);
+    public void createUser(@RequestBody UserDTO userDTO) {
+        this.userService.createUser(userDTO);
     }
 
     @GetMapping("/all")
-    public List<UserEntity> getAllUsers() {
+    public List<UserDTO> getAllUsers() {
         return this.userService.getAllUsers();
     }
 
