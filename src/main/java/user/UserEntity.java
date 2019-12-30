@@ -1,7 +1,7 @@
 package user;
 
 /**
- * @author Przemysław Jamobr
+ * @author Przemysław Jambor
  */
 public class UserEntity {
 }
