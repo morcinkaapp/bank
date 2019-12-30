@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author Przemysław Jambor
  */
-@RestController("/com/morcinka/pl/app/user")
+@RestController("/user")
 public class UserController {
 
     private UserService userService;
