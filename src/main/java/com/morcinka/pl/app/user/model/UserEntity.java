@@ -1,4 +1,4 @@
-package user.model;
+package com.morcinka.pl.app.user.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
-package user.service;
+package com.morcinka.pl.app.user.service;
 
-import user.model.UserDTO;
-import user.model.UserEntity;
+import com.morcinka.pl.app.user.model.UserDTO;
+import com.morcinka.pl.app.user.model.UserEntity;
 
 /**
  * @author Jarosław Kaczmarek

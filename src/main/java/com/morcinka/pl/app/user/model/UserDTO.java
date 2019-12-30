@@ -1,4 +1,4 @@
-package user.model;
+package com.morcinka.pl.app.user.model;
 
 /**
  * @author Jarosław Kaczmarek

@@ -1,8 +1,8 @@
-package user.repository;
+package com.morcinka.pl.app.user.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import user.model.UserEntity;
+import com.morcinka.pl.app.user.model.UserEntity;
 
 /**
  * @author Jarosław Kaczmarek

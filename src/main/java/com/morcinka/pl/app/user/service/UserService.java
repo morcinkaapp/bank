@@ -1,10 +1,12 @@
-package user.service;
+package com.morcinka.pl.app.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
-import user.model.UserDTO;
-import user.model.UserEntity;
-import user.repository.UserRepository;
+import com.morcinka.pl.app.user.model.UserDTO;
+import com.morcinka.pl.app.user.model.UserEntity;
+import com.morcinka.pl.app.user.repository.UserRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,5 +35,19 @@ public class UserService {
                 .map(UserMapper::mapToUserDTO)
                 .collect(Collectors.toList());
     }
+
+    @EventListener(ApplicationReadyEvent.class)
+	public void addExamplesUsers() {
+		UserEntity user1 = UserEntity.builder()
+				.withLogin("login1")
+				.withPassword("haslo1")
+				.build();
+		UserEntity user2 = UserEntity.builder()
+				.withLogin("login1")
+				.withPassword("haslo1")
+				.build();
+		userRepository.save(user1);
+		userRepository.save(user2);
+	}
 
 }
