@@ -25,11 +25,13 @@ public class UserService {
     }
 
     public void createUser(UserDTO userDTO) {
+
         UserEntity userEntity = UserMapper.mapToUserEntity(userDTO);
         userRepository.save(userEntity);
     }
 
     public List<UserDTO> getAllUsers() {
+
         return userRepository.findAll()
                 .stream()
                 .map(UserMapper::mapToUserDTO)
@@ -38,14 +40,17 @@ public class UserService {
 
     @EventListener(ApplicationReadyEvent.class)
 	public void addExamplesUsers() {
+
 		UserEntity user1 = UserEntity.builder()
 				.withLogin("login1")
 				.withPassword("haslo1")
 				.build();
+
 		UserEntity user2 = UserEntity.builder()
 				.withLogin("login1")
 				.withPassword("haslo1")
 				.build();
+
 		userRepository.save(user1);
 		userRepository.save(user2);
 	}

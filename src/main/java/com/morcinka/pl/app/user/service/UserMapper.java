@@ -9,6 +9,7 @@ import com.morcinka.pl.app.user.model.UserEntity;
 public class UserMapper {
 
     public static UserEntity mapToUserEntity(UserDTO userDTO) {
+
         return UserEntity.builder()
                 .withLogin(userDTO.getLogin())
                 .withPassword(userDTO.getPassword())
@@ -16,6 +17,7 @@ public class UserMapper {
     }
 
     public static UserDTO mapToUserDTO(UserEntity userEntity) {
+
         return UserDTO.builder()
                 .withLogin(userEntity.getLogin())
                 .withPassword(userEntity.getPassword())
