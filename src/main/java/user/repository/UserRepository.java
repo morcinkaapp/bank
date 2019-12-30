@@ -8,5 +8,6 @@ import user.model.UserEntity;
  * @author Jarosław Kaczmarek
  */
 @Repository
-public interface UserRepository extends JpaRepository<Long, UserEntity> {
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+
 }
